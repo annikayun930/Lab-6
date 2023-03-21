@@ -1,4 +1,7 @@
 
+
+
+# Encode 1
 def encoder(password):
     encoded = password
     encoded_list = [int(i) for i in str(encoded)]
@@ -15,7 +18,7 @@ def encoder(password):
 
 
 
-
+# Decode 2
 def decoder(secret):
     password = secret
     password_list = [int(i) for i in str(password)]
@@ -29,7 +32,7 @@ def decoder(secret):
     return passed
 
 
-
+# Main Menu
 def main():
     while True:
         menu = ["Menu", "-------------", "1. Encode", "2. Decode","3. Quit", " "] #menu
