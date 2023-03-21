@@ -51,7 +51,7 @@ def main():
         elif num == 2:
             revealed = decoder(secret)
 
-            print("The encoded password is,", secret, "and the original password is", decoder(secret),".")
+            print(f'The encoded password is {secret} and the original password is {decoder(secret)}.')
 
 
         elif num == 3:
