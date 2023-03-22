@@ -19,7 +19,7 @@ def encoder(password):
 
 
 # Decode 2
-def decoder(secret):
+"""def decoder(secret):
     password = secret
     password_list = [int(i) for i in str(password)]
     password_dict = {"3": "0", "4": "1", "5": "2", "6": "3", "7": "4", "8": "5", "9": "6", "0": "7", "1": "8", "2": "9"}
@@ -29,8 +29,18 @@ def decoder(secret):
 
     passed = int(passed)
 
-    return passed
+    return passed"""
 
+#wendy vallejos
+def  decode(secret):
+    epass = ""
+    password_list = [int(x) for x in str(secret)]
+    dict = {"3": "0", "4": "1", "5": "2", "6": "3", "7": "4", "8": "5", "9": "6", "0": "7", "1": "8", "2": "9"}
+    for x in password_list:
+        epass = epass + dict[str(x)]
+    epass = int(epass)
+
+    return epass
 
 # Main Menu
 def main():
@@ -49,9 +59,8 @@ def main():
 
 
         elif num == 2:
-            revealed = decoder(secret)
-
-            print(f'The encoded password is {secret} and the original password is {decoder(secret)}.')
+            revealed = decode(secret)
+            print(f'The encoded password is {secret} and the original password is {revealed}.')
 
 
         elif num == 3:
